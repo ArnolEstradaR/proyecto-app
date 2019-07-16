@@ -1,0 +1,60 @@
+var createError = require('http-errors');
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+//var apireRouter = require('./routes/apirouter');
+//var service = require('./routes/services');
+const usuarios = require('./routes/api/usuarios');
+const imagenes = require('./routes/api/imagenes');
+const productos = require('./routes/api/productos');
+const mensajes = require('./routes/api/mensajes');
+const citas = require('./routes/api/citas');
+var app = express();
+
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'pug');
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use('/', indexRouter);
+//app.use('/v1.0/api',apirouter);
+//app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/api/usuarios', usuarios);
+app.use('/api/imagenes', imagenes);
+app.use('/api/productos', productos);
+app.use('/api/mensajes', mensajes);
+app.use('/api/citas', citas);
+//catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  //res.render('error');
+  res.json({
+    error:res.message
+  });
+});
+const port = 8000;
+app.listen(port, () => {
+console.log("running in " + port);
+});
+
+module.exports = app;
