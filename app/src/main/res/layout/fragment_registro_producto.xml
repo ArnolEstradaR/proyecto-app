@@ -5,7 +5,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo3"
     android:orientation="vertical"
     tools:context=".Registro">
 
@@ -14,70 +13,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="PLUBICAR PRODUCTO"
+        android:text="Detalles Producto"
         android:textColor="#070000"
         android:textSize="20dp" />
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="244dp"
-        android:layout_height="159dp"
-        android:layout_gravity="center"
-        app:srcCompat="@drawable/sellercat" />
 
-    <EditText
-        android:id="@+id/editDescripcion"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Descripcion"
-        android:inputType="text" />
-
-    <EditText
-        android:id="@+id/editPrecio"
-        android:layout_width="94dp"
-        android:layout_height="42dp"
-        android:ems="10"
-        android:hint="Precio Bs.-"
-        android:inputType="number" />
-
-    <EditText
-        android:id="@+id/editStock"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-
-        android:hint="Stock"
-        android:inputType="number"
-        android:maxLength="8" />
-
-    <RadioGroup
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="ESTADO DEL PRODUCTO"
-            android:textColor="#070505" />
-
-        <RadioButton
-            android:id="@+id/disponible"
-            android:layout_width="156dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="DISPONIBLE" />
-
-        <RadioButton
-            android:id="@+id/agotado"
-            android:layout_width="143dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="AGOTADO" />
-    </RadioGroup>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -101,12 +41,74 @@
             android:text="Foto" />
     </LinearLayout>
 
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_camera" >
+
+    </ImageButton>
+
+    <EditText
+        android:id="@+id/editDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Descripcion"
+        android:inputType="text" />
+
+    <EditText
+        android:id="@+id/editStock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+
+        android:hint="Stock"
+        android:inputType="number"
+        android:maxLength="8" />
+
+    <EditText
+        android:id="@+id/editPrecio"
+        android:layout_width="94dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:hint="Precio Bs.-"
+        android:inputType="number" />
+    <RadioGroup
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Producto" />
+
+        <RadioButton
+            android:id="@+id/disponible"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Disponible" />
+
+        <RadioButton
+            android:id="@+id/agotado"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="No Disponible" />
+    </RadioGroup>
     <Button
         android:id="@+id/registrar"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="REGISTRAR" />
+
+
 
 
 </LinearLayout>

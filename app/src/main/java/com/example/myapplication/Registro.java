@@ -65,7 +65,7 @@ public class Registro extends AppCompatActivity implements View.OnClickListener,
         MapsInitializer.initialize(this);
         map.getMapAsync(this);
          geocoder= new Geocoder(getBaseContext(), Locale.getDefault());
-        */street=findViewById(R.id.street);
+        */
     }
 
     @Override
@@ -89,7 +89,6 @@ public class Registro extends AppCompatActivity implements View.OnClickListener,
         if(R2.isChecked()==true){
             req.put("sexo",R2.getText());
         }
-        req.put("direccion",street.getText().toString());
 
         if(R1.isChecked()==true){
             req.put("tipo",comprador.getText());

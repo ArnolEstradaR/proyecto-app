@@ -123,14 +123,6 @@
             android:layout_weight="1"
             android:text="comprador" />
     </RadioGroup>
-    <EditText
-        android:id="@+id/street"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Direccion" />
-
 
     <Button
         android:id="@+id/registrar"
