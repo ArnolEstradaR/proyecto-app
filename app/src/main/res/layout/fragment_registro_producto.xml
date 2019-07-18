@@ -106,7 +106,8 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="REGISTRAR" />
+        android:background="@drawable/button_rounded"
+        android:text="Registrar" />
 
 
 
